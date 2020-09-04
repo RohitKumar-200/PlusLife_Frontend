@@ -1,0 +1,178 @@
+/* The sidebar menu */
+body,html
+{
+    margin:0;
+}
+.side-bar 
+{
+  display: grid;
+  grid-template-columns: auto;
+  background-color: #312450; 
+  overflow-x: hidden;
+  height: 100%; 
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; 
+}
+
+.side-bar a {
+  padding: 0.25em;
+  text-decoration: none;
+  font-size:1.5em;
+  color: #818181;
+}
+
+.side-bar a:hover {
+  color: #f1f1f1;
+}
+
+.content 
+{
+    margin-left: 200px; /* Same as the width of the sidebar */
+    height: 100vh;
+}
+.side-bar .cell 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+p
+{
+    flex-wrap: wrap;
+}
+/* -------------- side-bar css ends---------------------*/
+
+.section
+{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.part
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one
+{
+    background-color: #5e42a6;
+}
+.two
+{
+    background-color: #5052B5;
+}
+.three
+{
+    background-color: #B74E91;
+}
+.four
+{
+    background-color: #5E42A6;
+}
+.part
+{
+    font-size: 1.2em;
+    color:aliceblue;
+}
+.button
+{
+    
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: border-color 0.2s ease;
+		-webkit-transition: border-color 0.2s ease;
+		-ms-transition: border-color 0.2s ease;
+		transition: border-color 0.2s ease;
+		background-color: transparent;
+		border: solid 1px white;
+		border-color: rgba(255, 255, 255, 0.15) ;
+		border-radius: 3em;
+		color: #ffffff ;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: bold;
+		height: calc(4.75em + 2px);
+		letter-spacing: 0.25em;
+		line-height: 4.75em;
+		outline: 0;
+		padding: 0 3.75em;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+}
+
+input[type="text"],input[type="password"],input[type="email"],input[type="tel"],input[type="number"]
+{
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 0.25em;
+		border: none;
+		border: solid 1px rgba(255, 255, 255, 0.15);
+		color: inherit;
+		display: block;
+		outline: 0;
+		padding: 0.5em;
+		text-decoration: none;
+		width: 100%;
+	}
+input[type="text"]:focus,input[type="password"]:focus,input[type="email"]:focus,input[type="number"]:focus
+        {
+			border-color: #ffffff;
+			box-shadow: 0 0 0 1px #ffffff;
+		}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: aliceblue;
+  opacity: 1; 
+}
+input[type="submit"]
+{
+    -moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: border-color 0.2s ease;
+		-webkit-transition: border-color 0.2s ease;
+		-ms-transition: border-color 0.2s ease;
+		transition: border-color 0.2s ease;
+		border: solid 1px white;
+		border-color: rgba(255, 255, 255, 0.15) ;
+		border-radius: 3em;
+		color: #ffffff ;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.8em;
+		font-weight: bold;
+		height: calc(4.75em + 2px);
+		letter-spacing: 0.25em;
+		line-height: 4.75em;
+		outline: 0;
+		padding: 0 3.75em;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+        background-color: #ffffff;
+        color: #312450 !important;
+}
+h1
+{
+    font-size: 3em;
+}
+.active
+{
+    color: #ffffff;
+}
