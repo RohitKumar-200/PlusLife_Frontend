@@ -5,9 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../images/plus.ico"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script src="./js/script.js" defer></script>
 </head>
-<body>
-    
+<body style="background-color: #5E42A6;">
+    <div class="top-bar">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Login</a>
+        <a href="#" class="active-bar">Register</a>
+    </div>
+    <div class="content" style="margin:0; max-height: 100%;">
+        <div class="section" >
+            <!------------->
+            <div class="part">
+                <h1 style="font-size: 4em;"> Register </h1>
+            </div>
+            <hr width="50%" style="background: linear-gradient(to right, red, yellow); height: 5px; border: none;">
+            <div class="part">
+                <h2 style="font-size:2.5em;"> Patient Registration </h2>
+            </div>
+            <div class="part"  style="font-size: 1.2em;">
+                <form id="patientRegistrationForm">
+				<input type="text" name="name" placeholder="Name" required/>
+                <input type="number" name="phoneNo" placeholder="Phone Number" required />
+				<input type="number" name="altPhoneNo" placeholder="Alternate Phone Number" />
+				<input type="email" name="email" placeholder="Email" required />
+                <input type="password" name="password" placeholder="Password" required/>
+				<!---------GENDER-------->
+                <h3>Gender</h3>
+                <input type="radio" id="patientGenderMale" name="gender" value="M" checked>
+				<label for="patientGenderMale">Male</label>
+                <input type="radio" id="patientGenderFemale" name="gender" value="F">
+				<label for="patientGenderFemale">Female</label>
+				<input type="radio" id="patientGenderOther" name="gender" value="O">
+				<label for="patientGenderOther">Other</label>
+				<!------------------->
+                <input type="number" name="age" placeholder="Age in Years" required/>
+				<input type="text" name="address" placeholder="Residential - Address" />
+				<label for="profilePic">Profile Photo:</label>
+                <input type="file" name="profilePic" multiple>						
+                <!--------submit button for form ------------>
+                    <div class="part">
+                <Button type="submit" class="button" >REGISTER</Button>
+				<input type="reset" value="Reset" class="button"/>
+                    </div>
+				</form>
+            </div>
+            <!-------------->
+            <hr width="50%" style="background: linear-gradient(to right, red, yellow); height: 5px; border: none;">
+            <div class="part">
+                <h2>Register as Doctor</h2>
+            </div>
+            <div class="part">
+                <form id="doctorRegistrationForm">
+                <input type="text" name="name" placeholder="Name" required/>
+				<input type="number" name="phoneNo" placeholder="Phone Number" required />
+				<input type="number" name="altPhoneNo" placeholder="Alternate Phone Number" />
+				<input type="email" name="email" placeholder="Email" required />
+				<input type="password" name="password" placeholder="Password" required/>
+                <!---------GENDER-------->
+                <h3>Gender</h3>
+				<input type="radio" id="doctorGenderMale" name="gender" value="M" checked>
+				<label for="doctorGenderMale">Male</label>
+                <input type="radio" id="doctorGenderFemale" name="gender"value="F" >
+				<label for="doctorGenderFemale">Female</label>
+				<input type="radio" id="doctorGenderOther" name="gender" value="O">
+				<label for="doctorGenderOther">Other</label>
+                <!------------------->
+                <input type="number" name="age" placeholder="Age in Years" required/>
+				<input type="text" name="address" placeholder="Residential - Address" />
+                <input type="text" name="degree" placeholder="Degree" />
+				<input type="text" name="specialization" placeholder="Specialization" />
+				<input type="number" name="workExperience" placeholder="Work Experience in years" />
+				<input type="text" name="about" placeholder="About" />
+				<input type="number" name="fees" placeholder="Fees" />
+				<input type="number" name="emergencyFees" placeholder="Emergency Fees" />
+				<input type="text" name="timings" placeholder="Hospital/Clinic Timings" />
+				<input type="text" name="weekDays" placeholder="Working Week days" />
+                    <br>
+				<label for="profilePic">Profile Photo:</label>
+                <input type="file" name="profilePic" multiple>
+                    <br><br>
+				<label for="clinicPhoto">Hospital/ Clinic Photo:</label>
+                <input type="file" name="clinicPhoto">
+                    <br><br>
+                <label for="certificates">Degree/Specialization Certificates:</label>
+                <input type="file" name="certificates" multiple>
+				<blockquote> The photo and certificates will be verified by our Agents. You will get a confirmation mail of successful registration as a doctor in Plus-life.</blockquote>
+                <!--------submit button for form ------------>
+                    <div class="part">
+                <Button type="submit" class="button" >REGISTER</Button>
+				<input type="reset" value="Reset" class="button"/>
+                    </div>
+                </form>
+        </div>
+        </div>
+    </div>
 </body>
 </html>
