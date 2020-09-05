@@ -365,6 +365,27 @@ input[type="radio"],input[type="checkbox"]
             font-family: 'georgia';
         }
 /*-----------------------*/
+        .upper-bar
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-top: 5em;
+            }
+            .upper-bar-box
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size : 1.2em;
+                background-color: #56D2AD;
+                color: white;
+                border-radius : 5em;
+                width: 200px;
+                height: 30px;
+            }
+
+/*-----------------------*/
 a
 {
     text-decoration: none;
@@ -375,17 +396,22 @@ a:hover
     cursor: pointer;
 }
 .yellow-green
-            {
-                background-color: yellowgreen;
-                color : white;
-            }
-        .green
-            {
-            color:white;
-            background-color : #45CF6C;
-            }
-        .red
-            {
-            color : white;
-            background-color: #CF5E45;
-            }
+{
+    background-color: yellowgreen;
+    color : white;
+}
+.green
+{
+  color:white;
+  background-color : #45CF6C;
+}
+.red
+{
+  color : white;
+  background-color: #CF5E45;
+}
+.no-decore
+{
+    background-color: transparent;
+    box-shadow: none;
+}
