@@ -34,7 +34,7 @@
                     {{#each arr}}
                     <div class="box">
                         <a href="../PatientProfile/?email={{this.email}}"><div class="text-box">Patient Name : {{this.patientName}}</div></a>
-                        <a href="mailto:{{this.doctorEmail}}"><div class="color-box no-decore"><img src="../images/mail.png"></div></a>
+                        <a href="mailto:{{this.email}}"><div class="color-box no-decore"><img src="../images/mail.png"></div></a>
                         <a href="{{this.documents}}"><div class="color-box green">Documents</div></a>
                         <a ><div class="color-box green" onclick="deleteMeeting('{{this.meetingId}}')" style="cursor:pointer;" >Mark as Done</div></a>
                         <a ><div class="color-box green" onclick="joinMeetingClick('{{this.tokenNo}}', '{{this.meetingUrl}}')" style="cursor:pointer;" >Join Meeting</div></a>
