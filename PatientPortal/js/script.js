@@ -95,4 +95,13 @@ searchBar.addEventListener("keyup", () => {
     }
 });
 
+//--------------------------------------------------------------------//
+//To logout
+document.getElementById('logoutLink').addEventListener('click', ()=>{
+    localStorage.removeItem("auth-token");
+    localStorage.removeItem("zoomMeetingUrl");
+    window.location.href = "../Home";
+});
+
+
 }
