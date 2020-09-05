@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../images/plus.ico"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script src="./js/script.js" defer></script>
 </head>
-<body>
-    
-</body>
+<body class="three">
+    <div class="top-bar">
+        <a href="#" class="active-bar"> Covid-19 Symptom checker </a>
+    </div>
+    <div class="main">
+        <div class="section">
+            <div class="part">
+            <h1 style="color:white;">Covid-19 Symptom Checker</h1>
+            </div>
+            <hr width="100%" style="background: linear-gradient(to right, red, yellow); height: 5px; border: none;">
+            <div class="part">
+            <h4 style="color: white; font-size: 1.2em;">Select below symptoms and submit to get results</h4>
+            </div>
+            <div class="symptom">
+                    <div class="part" style="justify-content: left;">
+                        <input type="checkbox" id="1" ><label for="1">Fever or Chills</label></div>
+                    <div class="part" style="justify-content: left;">
+                        <input type="checkbox" id="2"  value="2"><label for="2">Cough</label></div>
+                    <div class="part" style="justify-content: left;">
+                    <input type="checkbox" id="3"  value="3"><label for="3">Difficulty in Breathing</label>
+                    </div>
+                     <div class="part" style="justify-content: left;">
+                         <input type="checkbox" id="4" ><label for="4">Fatigue</label></div>
+                    <div class="part" style="justify-content: left;">
+                        <input type="checkbox" id="5" ><label for="5">Muscle or Body Aches</label></div>
+                    <div class="part" style="justify-content: left;">
+                        <input type="checkbox" id="6" ><label for="6">New Loss of Taste</label></div>
+                    <div class="part" style="justify-content: left;">
+                        <input type="checkbox" id="7" ><label for="7">Sore Throat</label></div>
+                    <div class="part" style="justify-content: left;">
+                        <input type="checkbox" id="8" ><label for="8">Congestion or Runny Nose</label></div>
+                    <div class="part"style="justify-content: left;">
+                        <input type="checkbox" id="9" ><label for="9">Nausea or Vomiting</label></div>
+                     <div class="part" style="justify-content: left;">
+                         <input type="checkbox" id="10"><label for="10">Diarrhea</label></div>
+                    <div class="part" style="justify-content: left;">
+                        <input type="checkbox" id="11" ><label for="11">Headache</label></div>
+                        <div class="part" style="justify-content: left;">
+                            <input type="checkbox" id="12" ><label for="12">Burning Eyes and Irritation</label></div>
+                    <div class="part col-1-3" >
+                        <input type="submit" value="CHECK" class="primary" /></div>
+            </div>
+            <hr width="100%" style="background: linear-gradient(to right, white, blue); height: 5px; border: none;">
+            <div class="part">
+                <h1 id="output-prob">Probabilty of Covid-19 disease : 0 %</h1>
+            </div>
+            <div class="part">
+                <h4> Conclusion : <!---If probabilty > 50 consult a doctor, if probabilty >  75 get tested for covid 19 in hospital--> 
+                </h4>
+            </div>
+            <hr width="100%" style="background: linear-gradient(to right, blue, white); height: 5px; border: none;">
+            <div class="part">
+                <h1><a href="https://covidvisualizer.com/" target="_blank" >Covid Visualizer</a></h1>
+                </div>
+            <div class="part" style="margin: 1em;">
+                <iframe src="https://covidvisualizer.com/" frameborder="0" style="width:90%; height: 75vh;"></iframe>
+            </div>
+        </div>
+    </div>
+	</body>
 </html>
