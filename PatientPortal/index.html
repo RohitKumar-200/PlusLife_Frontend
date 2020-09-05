@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../images/plus.ico"/>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
     <script src="./js/script.js" defer></script>
 </head>
     
@@ -15,78 +16,64 @@
             <a href="../AboutUs">About Us</a>
             <a href="../Covid-19">Symptom Checker Covid-19</a>
             <a href="../PatientProfile">My profile</a>
-            <a href="#" onclick=logout()>Log Out</a>
+            <a href="" id="logoutLink">Log Out</a>
         </div>
         <!--Pending appointments-->
         <div class="main one">
             <div class="section">
                 <div class="scroll-box" id="pendingAppointments">
-                             <div class="box">
-                                <a href="#"><div class="text-box">Doctor Name : Dr. Jonny Sins</div></a>
-                                <a href="#"><div class="color-box no-decore"><img src="../images/mail.png"></div></a>
-                                <a href="#"><div class="color-box green">Mark as Done</div></a>
-                                <a href="#"><div class="color-box green">Join Meeting</div></a>
-                                <a href="#"><div class="color-box no-decore">Date : 12\12\2020</div></a>
-                                <a href="#"><div class="color-box no-decore">Token-Number : 2</div></a>
-                                <a href="#"><div class="color-box no-decore">Current-token : 1</div></a>
-                                <a href="#"><div class="color-box red">Cancel Appointment</div></a>
-                            </div> 
-                        </div>
+                </div>
+                <script id="pendingAppointmentTemplate" type="text/x-handlebars-template">
+                    {{#each arr}}
+                    <div class="box">
+                        <a href="../DoctorProfile/?email={{this.doctorEmail}}"><div class="text-box">Doctor Name : {{this.doctorName}}</div></a>
+                        <a href="mailto:{{this.doctorEmail}}"><div class="color-box no-decore"><img src="../images/mail.png"></div></a>
+                        <a ><div class="color-box green" onclick="deleteMeeting('{{this.meetingId}}')" style="cursor:pointer;">Mark as Done</div></a>
+                        <a href="{{this.meetingUrl}}"><div class="color-box green" style="cursor:pointer;">Join Meeting</div></a>
+                        <a ><div class="color-box no-decore">Date : {{this.date}}</div></a>
+                        <a ><div class="color-box no-decore">Your-Token-Number : {{this.tokenNo}}</div></a>
+                        <a ><div class="color-box no-decore">Current-token : {{this.currentTokenNo}}</div></a>
+                        <a ><div class="color-box red" onclick="deleteMeeting('{{this.meetingId}}')" style="cursor:pointer;">Cancel Appointment</div></a>
+                    </div>
+                    {{/each}}
+                </script>
             </div>
         </div>
          <!--Book appointments-->
         <div class="main two">
             <div class="section">
                 <div class="part">
-                                    <!--Search bar-->
-                                    <div class="search-bar">
-                                    <div class="search-box"><input type="text" class="search-box-text" id="searchBar"></div>
-                                    <div class="search-button" id="searchButton" style="cursor: pointer;"><a>Search</a></div>
-                                    </div>
-                                    <!----------------->
+                    <!--Search bar-->
+                    <div class="search-bar">
+                    <div class="search-box"><input type="text" class="search-box-text" id="searchBar"></div>
+                    <div class="search-button" id="searchButton" style="cursor: pointer;"><a>Search</a></div>
+                    </div>
+                    <!----------------->
                 </div>
                 <div class="part">
                     <div class="scroll-box" id="searchResults" style="width:90%; margin-top:0;">
-                         <div class="box">
-                            <div class="cell-1"><img src="../images/davatar.jpg" class="avatar"></div>
-                            <div class="cell">Dr. Jonny Jonny</div>
-                            <div class="cell">MBBS</div>
-                            <div class="cell yellow-green">Fees : 500/-</div>
-                            <div class="cell">Neurologist</div>
-                            <div class="cell">Lavda specialist</div>
-                            <div class="cell green">    <a href="#" value="Open as Full Window PopUp" onclick="javascript:Full_W_P('../BookAppointment');">Book Now    </a></div>
-                            <div class="cell green">    <a href="#">View Profile</a></div>
-                            <div class="cell ">Working-hours :</div>
-                            <div class="cell ">Hospital/Clinic Name</div>
-                        </div> 
+                        Your search does not match any results, try other keywords!
                     </div>
+                    <script id="searchResultTemplate" type="text/x-handlebars-template">
+                        {{#each searchList}}
+                        <div class="box">
+                            <div class="cell-1"><img src="{{this.profilePic}}" class="avatar"></div>
+                            <div class="cell">{{this.name}}</div>
+                            <div class="cell">{{this.degree}}</div>
+                            <div class="cell yellow-green">Fees : {{this.fees}}/-</div>
+                            <div class="cell">{{this.specialization}}</div>
+                            <div class="cell ">{{this.timings}}</div>
+                            <div class="cell green"><a href="../BookAppointment/?email={{this.email}}">Book Now</a></div>
+                            <div class="cell green"><a href="../DoctorProfile/?email={{this.email}}">View Profile</a></div>
+                            <div class="cell">{{this.phoneNo}}</div>
+                            <div class="cell "><a href="mailto:{{this.email}}">{{this.email}}</a></div>
+                            <div class="cell ">{{this.weekDays}}</div>
+                        </div>
+                        {{/each}}
+                    </script>
                 </div>
             </div>
         </div>
         <!-------------------------------------------------->
-		<!-- Scripts -->
-<script type="text/javascript">
-function Full_W_P(url) {
- params  = 'width='+screen.width;
- params += ', height='+screen.height;
- params += ', top=0, left=0'
- params += ', fullscreen=yes';
- params += ', directories=no';
- params += ', location=no';
- params += ', menubar=no';
- params += ', resizable=no';
- params += ', scrollbars=no';
- params += ', status=no';
- params += ', toolbar=no';
-
-
- newwin=window.open(url,'FullWindowAll', params);
- if (window.focus) {newwin.focus()}
- return false;
-}
-</script>
-
-
     </body>
-    
 </html>
