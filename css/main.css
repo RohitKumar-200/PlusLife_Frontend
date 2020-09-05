@@ -452,31 +452,32 @@ a:hover
     color:white;
     cursor: pointer;
 }
-.yellow-green
-{
-    background-color: yellowgreen;
-    color : white;
-}
-.green
-{
-  color:white;
-  background-color : #45CF6C;
-}
-.red
-{
-  color : white;
-  background-color: #CF5E45;
-}
-.blue
-{
-  background-color: #7CC2EA;
-  color: white;
-}
-.no-decore
-{
-    background-color: transparent;
-    box-shadow: none;
-}
+        .yellow-green
+            {
+                background-color: yellowgreen;
+                color : white;
+            }
+        .green
+            {
+            color:white;
+            background-color : #45CF6C;
+            }
+        .red
+            {
+            color : white;
+            background-color: #CF5E45;
+            }
+        .blue
+            {
+            background-color: #7CC2EA;
+            color: white;
+            }
+        .no-decore
+            {
+                background-color: transparent;
+                box-shadow: none;
+            }
+
 /*-----------------------------*/
 @media only screen and (max-width: 500px) 
 {
@@ -487,7 +488,12 @@ a:hover
     .side-bar
     {
         width:100px;
-        font-size: 0.8em;
+        font-size: 0.7em;
+        text-align: center;
+    }
+    .side
+    {
+        font-size: 0.7em;
     }
     .content
     {
@@ -517,6 +523,11 @@ a:hover
     {
         width:120px;
         font-size: 1em;
+        text-align: center;
+    }
+    .side
+    {
+        font-size:0.8em;
     }
     .content
     {
@@ -530,6 +541,87 @@ a:hover
     .button,input[type="submit"],button[type="submit"],input[type="reset"],input[type="text"],input[type="password"],input[type="email"],input[type="tel"],input[type="number"],input[type="radio"],input[type="checkbox"]
     {
         font-size:0.7em;
+    }
+    .upper-bar-box
+    {
+        width : 150px;
+        font-size:0.9em;
+    }
+}
+/*-----------------------------*/
+@media only screen and (max-width: 630px) 
+{
+    body
+    {
+        font-size:0.7em;
+    }
+    .scroll-box
+    {
+        margin-top:3em;
+        height : 400px;
+    }
+    .color-box,.text-box
+    {
+        font-size: 1.3em;
+        margin: 0.25em;
+    }
+    .box
+    {
+        height: 130px;
+        font-size:0.9em;
+    }
+    .search-bar
+    {
+        width: 400px;
+    }
+    .cell
+    {
+        font-size:0.8em;
+    }
+    .upper-bar
+    {
+        margin-top: 3em;
+    }
+    .upper-bar-box
+    {
+        width:120px;
+    }
+}
+/*-----------------------------*/
+@media only screen and (max-width: 450px) 
+{
+    body
+    {
+        font-size:9pt;
+    }
+    .search-bar
+    {
+        width : 350px;
+    }
+    .color-box,.text-box,.cell
+    {
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .green
+    {
+        color: green;
+        font-size:1.8em;
+    }
+    .red
+    {
+        color:red;
+        font-size: 1.8em;
+    }
+    .cell 
+    {
+        color: white;
+        font-size:1.2em;
+    }
+    .upper-bar-box
+    {
+        width:100px;
+        font-size:0.8em;
     }
 }
 /*-----------------------------*/
