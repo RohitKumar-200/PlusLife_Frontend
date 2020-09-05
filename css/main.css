@@ -547,6 +547,11 @@ a:hover
         width : 150px;
         font-size:0.9em;
     }
+    .button
+    {
+        border:none;
+        font-size: 1.3em;
+    }
 }
 /*-----------------------------*/
 @media only screen and (max-width: 630px) 
@@ -622,6 +627,35 @@ a:hover
     {
         width:100px;
         font-size:0.8em;
+    }
+    .col-1-2
+    {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .book-grid
+    {
+        grid-template-columns: auto;
+    }
+    .book-grid-cell
+    {
+        font-size:0.8em;
+    }
+}
+/*-----------------------------*/
+@media only screen and (max-width: 1200px)
+{
+    .profile-grid-cell
+    {
+        font-size: 0.6em;
+    }
+}
+@media only screen and (max-width: 950px)
+{
+    .profile-grid
+    {
+        grid-template-columns: auto;
+        font-size: 1em;
     }
 }
 /*-----------------------------*/
