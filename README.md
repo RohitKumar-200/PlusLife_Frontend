@@ -5,4 +5,5 @@
 > [Github for Frontend](https://github.com/RohitKumar-200/PlusLife_Frontend)  
 > [Heroku deployed Frontend](http://plus-life.herokuapp.com/)  
 > [Github for Backend](https://github.com/RohitKumar-200/PlusLife_Backend)  
-> [Heroku deployed Backend](http://pluslife-api.herokuapp.com/)
+> [Heroku deployed Backend](http://pluslife-api.herokuapp.com/)  
+## [PPT](https://github.com/RohitKumar-200/PlusLife_Frontend/blob/master/Plus%20Life.pptx?raw=true)
