@@ -5,9 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../images/plus.ico"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <script src="./js/script.js" defer></script>
 </head>
-<body>
     
-</body>
+    <body>
+        <div class="top-bar">
+            <a href="../Home">Home</a>
+            <a href="../AboutUs">About Us</a>
+            <a href="../Covid-19">Symptom Checker Covid-19</a>
+            <a href="../PatientProfile">My profile</a>
+            <a href="#" onclick=logout()>Log Out</a>
+        </div>
+        <!--Pending appointments-->
+        <div class="main one">
+            <div class="section">
+                <div class="scroll-box" id="pendingAppointments">
+                             <div class="box">
+                                <a href="#"><div class="text-box">Doctor Name : Dr. Jonny Sins</div></a>
+                                <a href="#"><div class="color-box no-decore"><img src="../images/mail.png"></div></a>
+                                <a href="#"><div class="color-box green">Mark as Done</div></a>
+                                <a href="#"><div class="color-box green">Join Meeting</div></a>
+                                <a href="#"><div class="color-box no-decore">Date : 12\12\2020</div></a>
+                                <a href="#"><div class="color-box no-decore">Token-Number : 2</div></a>
+                                <a href="#"><div class="color-box no-decore">Current-token : 1</div></a>
+                                <a href="#"><div class="color-box red">Cancel Appointment</div></a>
+                            </div> 
+                        </div>
+            </div>
+        </div>
+         <!--Book appointments-->
+        <div class="main two">
+            <div class="section">
+                <div class="part">
+                                    <!--Search bar-->
+                                    <div class="search-bar">
+                                    <div class="search-box"><input type="text" class="search-box-text" id="searchBar"></div>
+                                    <div class="search-button" id="searchButton" style="cursor: pointer;"><a>Search</a></div>
+                                    </div>
+                                    <!----------------->
+                </div>
+                <div class="part">
+                    <div class="scroll-box" id="searchResults" style="width:90%; margin-top:0;">
+                         <div class="box">
+                            <div class="cell-1"><img src="../images/davatar.jpg" class="avatar"></div>
+                            <div class="cell">Dr. Jonny Jonny</div>
+                            <div class="cell">MBBS</div>
+                            <div class="cell yellow-green">Fees : 500/-</div>
+                            <div class="cell">Neurologist</div>
+                            <div class="cell">Lavda specialist</div>
+                            <div class="cell green">    <a href="#" value="Open as Full Window PopUp" onclick="javascript:Full_W_P('../BookAppointment');">Book Now    </a></div>
+                            <div class="cell green">    <a href="#">View Profile</a></div>
+                            <div class="cell ">Working-hours :</div>
+                            <div class="cell ">Hospital/Clinic Name</div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------------------->
+		<!-- Scripts -->
+<script type="text/javascript">
+function Full_W_P(url) {
+ params  = 'width='+screen.width;
+ params += ', height='+screen.height;
+ params += ', top=0, left=0'
+ params += ', fullscreen=yes';
+ params += ', directories=no';
+ params += ', location=no';
+ params += ', menubar=no';
+ params += ', resizable=no';
+ params += ', scrollbars=no';
+ params += ', status=no';
+ params += ', toolbar=no';
+
+
+ newwin=window.open(url,'FullWindowAll', params);
+ if (window.focus) {newwin.focus()}
+ return false;
+}
+</script>
+
+
+    </body>
+    
 </html>
