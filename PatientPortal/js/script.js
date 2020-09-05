@@ -17,10 +17,12 @@ const pendingAppointmentFun = () => {
     }).then(jsonResponse => {
         // console.log(jsonResponse);
         const arr = jsonResponse;
+        if(arr.length > 0) {
         const temp = document.getElementById('pendingAppointmentTemplate').innerHTML;
         const tempFun = Handlebars.compile(temp)
         const html = tempFun({arr: arr});
         document.getElementById("pendingAppointments").innerHTML = html;
+        }
     }).catch(err => {
         alert(err);
     });
