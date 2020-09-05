@@ -452,28 +452,28 @@ a:hover
     color:white;
     cursor: pointer;
 }
-        .yellow-green
-            {
-                background-color: yellowgreen;
-                color : white;
-            }
-        .green
-            {
-            color:white;
-            background-color : #45CF6C;
-            }
-        .red
-            {
-            color : white;
-            background-color: #CF5E45;
-            }
-        .blue
-            {
-            background-color: #7CC2EA;
-            color: white;
-            }
-        .no-decore
-            {
-                background-color: transparent;
-                box-shadow: none;
-            }
+.yellow-green
+{
+    background-color: yellowgreen;
+    color : white;
+}
+.green
+{
+  color:white;
+  background-color : #45CF6C;
+}
+.red
+{
+  color : white;
+  background-color: #CF5E45;
+}
+.blue
+{
+  background-color: #7CC2EA;
+  color: white;
+}
+.no-decore
+{
+    background-color: transparent;
+    box-shadow: none;
+}
