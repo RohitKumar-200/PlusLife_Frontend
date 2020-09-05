@@ -7,7 +7,7 @@ myForm.addEventListener("submit", function (e) {
     this.querySelectorAll("input").forEach((e) => {
         formData[e.name] = e.value;
     });
-    console.log(formData);
+    // console.log(formData);
 
     fetch("https://pluslife-api.herokuapp.com/login", {
         method: "POST",
