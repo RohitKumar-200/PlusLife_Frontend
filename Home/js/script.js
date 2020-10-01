@@ -18,16 +18,18 @@ myForm.addEventListener("submit", function (e) {
     })
     .then(function (response) {
         if (response.ok) {
-						localStorage.setItem('auth-token',response.headers.get('auth-token'));
-            return response.json();
-        } else {
+		localStorage.setItem('auth-token',response.headers.get('auth-token'));
+            	return response.json();
+        } 
+	else {
             throw new Error("Email or Password Incorrect");
         }
     })
     .then((jsonResponse)=>{
         if(jsonResponse.designation == 'doctor') {
             window.location = '../DoctorPortal';
-        } else if (jsonResponse.designation == 'patient') {
+        } 
+	else if (jsonResponse.designation == 'patient') {
             window.location = '../PatientPortal';
         }
     })
